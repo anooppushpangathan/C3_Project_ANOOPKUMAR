@@ -31,4 +31,15 @@ public class RestaurantService {
     public List<Restaurant> getRestaurants() {
         return restaurants;
     }
+
+    public String getPriceResturant(List<Item> items) {
+        int price = 0;
+
+        for (Item item : items) {
+            price = price + item.getPrice();
+
+        }
+        return String.valueOf(price);
+
+    }
 }

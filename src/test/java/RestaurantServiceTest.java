@@ -68,4 +68,13 @@ class RestaurantServiceTest {
         assertEquals(initialNumberOfRestaurants + 1,service.getRestaurants().size());
     }
     //<<<<<<<<<<<<<<<<<<<<ADMIN: ADDING & REMOVING RESTAURANTS>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+    @Test
+    public void calculate_the_order_cost()
+    {  String expectedPrice = "100";
+        mockData();
+        String getPrice = service.getPriceResturant(restaurant.getMenu());
+
+        assertEquals(expectedPrice, getPrice);
+    }
 }
