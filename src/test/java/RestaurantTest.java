@@ -15,8 +15,8 @@ class RestaurantTest {
          LocalTime closingTime = LocalTime.parse("22:00:00");
 
          restaurant =new Restaurant("Amelie's cafe","Chennai",openingTime,closingTime);
-         restaurant.addToMenu("Sweet corn soup",119);
-         restaurant.addToMenu("Vegetable lasagne", 269);
+         restaurant.addToMenu("Sweet corn soup",119,true);
+         restaurant.addToMenu("Vegetable lasagne", 26,false);
      }
     //>>>>>>>>>>>>>>>>>>>>>>>>>OPEN/CLOSED<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
     //-------FOR THE 2 TESTS BELOW, YOU MAY USE THE CONCEPT OF MOCKING, IF YOU RUN INTO ANY TROUBLE
@@ -48,7 +48,7 @@ class RestaurantTest {
        mockData();
 
         int initialMenuSize = restaurant.getMenu().size();
-        restaurant.addToMenu("Sizzling brownie",319);
+        restaurant.addToMenu("Sizzling brownie",319,true);
         assertEquals(initialMenuSize+1,restaurant.getMenu().size());
     }
     @Test

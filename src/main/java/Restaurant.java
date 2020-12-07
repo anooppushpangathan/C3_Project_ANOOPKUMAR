@@ -35,8 +35,8 @@ public class Restaurant {
         return null;
     }
 
-    public void addToMenu(String name, int price) {
-        Item newItem = new Item(name,price);
+    public void addToMenu(String name, int price, boolean check) {
+        Item newItem = new Item(name,price,check);
         menu.add(newItem);
     }
     

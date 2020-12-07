@@ -36,6 +36,7 @@ public class RestaurantService {
         int price = 0;
 
         for (Item item : items) {
+            if(item.isCheck())
             price = price + item.getPrice();
 
         }
